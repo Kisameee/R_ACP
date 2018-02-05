@@ -13,7 +13,15 @@ summary(val.cut)
 val.cut
 val.freq = table(val.cut)
 val.cut
+hist(val, br,main="histogramme",xlab=" d'affaire",ylim=c(0,200), ylab="entreprise",right=FALSE, col='blue',border="white", freq = TRUE)
 mean(val)
-hist(val, br,main="histogramme de bogoss",xlab="chiffre d'affaire",ylim=c(0,200), ylab="entreprise",right=FALSE, col='red',border="green", freq = TRUE)
 sd(val)
+
+
+# Histogramme cumulé
+plot(ecdf(val))
+
+# Exo 1 question 4
+median(val[val > 3])
+length(val[val > 3])/length(val)
 
